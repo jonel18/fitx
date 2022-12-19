@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Aphrofit Program</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!--===============================================================================================-->
+    <style>
+        .hidden {display: none;}
+        .txt2 {
+            cursor: pointer;
+        }
+        .txt2:hover {
+            color: #7ee6b8;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="limiter">
+    <div class="container-login100">
+        <div class="wrap-login100 main">
+            <div class="row">
+                <div class="login100-pic js-tilt col-md-4" data-tilt>
+                    <a href="../index.html"> <img src="../images/AZ logo.png" alt="IMG"></a>
+                </div>
+                <div class="col-md-8">
+                    <form class="login100-form validate-form logIn">
+					<span class="login100-form-title">
+						Anetar i Regjistruar
+					</span>
+
+                        <div class="wrap-input100 validate-input" data-validate="Fromati i sakte i email: az@abc.xyz">
+                            <input class="input100" type="text" name="log_email" placeholder="Email">
+                            <span class="focus-input100"></span>
+                            <span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+                        </div>
+
+                        <div class="wrap-input100 validate-input" data-validate="Fjalekalimi eshte i nevojshme">
+                            <input class="input100" type="password" name="log_pass" placeholder="Fjalekalimi">
+                            <span class="focus-input100"></span>
+                            <span class="symbol-input100">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+						</span>
+                        </div>
+
+                        <div class="container-login100-form-btn">
+                            <div class="login100-form-btn" id="logIn">
+                                Logohu
+                            </div>
+                        </div>
+
+                        <div class="text-center p-t-12">
+						<span class="txt1">
+							Harrove
+						</span>
+                            <span class="txt2 h_fjal" href="#">
+                                Fjalekalimin?
+                            </span>
+                        </div>
+                    </form>
+
+                    <form class="login100-form validate-form signUp">
+					<span class="login100-form-title">
+						Forme Regjistrimi
+					</span>
+
+                        <div class="row">
+                            <div class="col-md-3 label">Email</div>
+                            <div class="wrap-input100 validate-input col-md-9"
+                                 data-validate="Formati i sakte i email: az@abc.xyz">
+                                <input class="input100" type="text" name="email" placeholder="Email">
+                                <span class="focus-input100"></span>
+                                <span class="symbol-input100">
+								<i class="fa fa-envelope" aria-hidden="true"></i>
+							</span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-3 label">Emri</div>
+                            <div class="wrap-input100 validate-input col-md-9" data-validate="Emri eshte i nevojshem">
+                                <input class="input100" type="text" name="emri" placeholder="Emri">
+                                <span class="focus-input100"></span>
+                                <span class="symbol-input100">
+							<i class="fa fa-user" aria-hidden="true"></i>
+						</span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-3 label">Mbiemri</div>
+                            <div class="wrap-input100 validate-input col-md-9"
+                                 data-validate="Mbiemri eshte i nevojshem">
+                                <input class="input100" type="text" name="mbiemri" placeholder="Mbiemri">
+                                <span class="focus-input100"></span>
+                                <span class="symbol-input100">
+							<i class="fa fa-user" aria-hidden="true"></i>
+						</span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-3 label">Ditelindja</div>
+                            <div class="wrap-input100 validate-input col-md-9"
+                                 data-validate="Ditelindja eshte e nevojshme">
+                                <input class="input100" type="date" name="ditelindja" placeholder="Ditelindja">
+                                <span class="focus-input100"></span>
+                                <span class="symbol-input100">
+							<i class="fa fa-calendar" aria-hidden="true"></i>
+						</span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-3 label">Gjinia</div>
+                            <div class="wrap-input100 validate-input col-md-9"
+                                 data-validate="Gjinia eshte e nevojshme">
+                                <select class="input100" name="gjinia">
+                                    <option value="F"> Femer </option>
+                                    <option value="M"> Mashkull </option>
+                                </select>
+                                <span class="focus-input100"></span>
+                                <span class="symbol-input100">
+							<i class="fa fa-transgender" aria-hidden="true"></i>
+						</span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-3 label">Celular</div>
+                            <div class="wrap-input100 validate-input col-md-9"
+                                 data-validate="Celulari eshte i nevojshem">
+                                <input class="input100" type="text" name="celular" placeholder="Celular">
+                                <span class="focus-input100"></span>
+                                <span class="symbol-input100">
+							<i class="fa fa-mobile" aria-hidden="true"></i>
+						</span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-3 label">Fjalekalimi</div>
+                            <div class="wrap-input100 validate-input col-md-9"
+                                 data-validate="Fjalekalimi eshte i nevojshem">
+                                <input class="input100" type="password" name="pass" placeholder="Fjalekalimi">
+                                <span class="focus-input100"></span>
+                                <span class="symbol-input100">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+						</span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-3 label">Perserit fjalekalimin</div>
+                            <div class="wrap-input100 validate-input col-md-9"
+                                 data-validate="Fjalekalimi nuk perputhet">
+                                <input class="input100" type="password" name="pass_r"
+                                       placeholder="Perserit fjalekalimin">
+                                <span class="focus-input100"></span>
+                                <span class="symbol-input100">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+						</span>
+                            </div>
+                        </div>
+
+
+                        <div class="container-login100-form-btn">
+                            <div id="signUp" class="login100-form-btn">
+                                Regjistrohu
+                            </div>
+                        </div>
+
+
+                    </form>
+                </div>
+            </div>
+
+            <div class="text-center p-t-136 logIn" style="width: 100%;  text-align: right !important;">
+                <a class="txt2 login100-form-btn" style="background-color: #f6f6f6; color: black;" onclick="signUp()">
+                    Krijo nje llogari
+                    <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+                </a>
+            </div>
+
+            <div class="text-center p-t-136 signUp" style="width: 100%;  text-align: right !important;">
+                <a class="txt2 login100-form-btn" style="background-color: #f6f6f6; color: black;" onclick="logIn()">
+                    Logohu ne llogari
+                    <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="wrap-login100 forgot_pass hidden">
+            <div class="row">
+                <div class="login100-pic js-tilt col-md-4" data-tilt>
+                    <a href="../index.html"> <img src="../images/AZ logo.png" alt="IMG"></a>
+                </div>
+                <div class="col-md-8">
+                    <form class="login100-form validate-form forgotPass">
+					<span class="login100-form-title">
+						Keni harruar fjalekalimin?
+					</span>
+
+                        <div class="wrap-input100 validate-input" data-validate="Fromati i sakte i email: az@abc.xyz">
+                            <input class="input100" type="text" name="forgot_email" placeholder="Email">
+                            <span class="focus-input100"></span>
+                            <span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+                        </div>
+
+                        <div class="container-login100-form-btn">
+                            <div class="login100-form-btn" id="forgot">
+                                Dergo email!
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+<!--===============================================================================================-->
+<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+<script src="vendor/bootstrap/js/popper.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+<script src="vendor/tilt/tilt.jquery.min.js"></script>
+<script>
+    $('.js-tilt').tilt({
+        scale: 1.1
+    })
+
+    function signUp() {
+        $('.signUp').show();
+        $('.logIn').hide();
+    }
+
+    function logIn() {
+        $('.signUp').hide();
+        $('.logIn').show();
+    }
+</script>
+<!--===============================================================================================-->
+<script src="js/main.js"></script>
+
+<script>
+    $(".h_fjal").click(function (){
+        $(".main").addClass("hidden");
+        $(".forgot_pass").removeClass("hidden");
+    });
+    $("#forgot").click(function () {
+        $.post("services/forgotPass.php", $(this).parent().parent().serialize(),
+            function (data) {
+                location.reload();
+            }, "json")
+            .fail(function () {
+                alert("Dicka shkoi gabim. Provoni perseri me vone.");
+            });
+    })
+</script>
+
+</body>
+</html>

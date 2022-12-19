@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Aphrodite User Profile</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="../images/icons/favicon.ico"/>
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="../fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="../vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="../vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="../vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="../css/util.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <!--===============================================================================================-->
+    <style>
+        .navbar {
+            margin-top: 3em;
+            border: none;
+        }
+
+        .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+            background-color: white;
+            color: black;
+        }
+
+        .navbar-brand,
+        .navbar-nav>li>a {
+            color: black;
+
+        }
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.25em;
+            letter-spacing: 3px;
+        }
+
+        .container-fluid {
+            background-color: #fff;
+        }
+
+        .navbar-toggle {
+            border: none;
+        }
+
+        .icon-bar {
+        // color: black;
+        }
+
+        .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+            background-color: #fff;
+        }
+
+        .navbar-default .navbar-toggle .icon-bar {
+            background-color: black;
+        }
+
+        .wrap-login100 {
+            margin: 10px;
+            padding: 40px;
+        }
+        .card_title {
+            text-align: center;
+            font-size: 20px;
+            margin-bottom: 35px;
+            color: #0b2687;
+        }
+        .row {
+            width: 100%;
+        }
+        .col-md-3.label {
+            text-align: left;
+            color: black;
+            padding-left: 30px;
+            font-size: 15px;
+        }
+
+        textarea {
+            height: 100px !important;
+            padding: 20px !important;
+        }
+
+        input[type="radio"], input[type="checkbox"] {
+            width: 40px;
+            margin: 5px 0px 5px;
+            line-height: normal;
+            display: initial;
+            height: 25px;
+        }
+        .hidden {
+            display: none;
+        }
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+            min-width: 60px;
+        }
+
+        span.add_row, span.add_row_ru {
+            font-size: 25px;
+            color: #b6b2b2;
+            padding: 3px;
+            cursor: pointer;
+        }
+        span.add_row:hover, span.add_row_ru:hover {
+            color: #ce9d9b;
+        }
+
+        span.select2.select2-container.select2-container--default {
+            width: 100% !important;
+        }
+
+        textarea, input {
+            background: #f6f6f6;
+            width: 100%;
+            min-height: 50px;
+            padding: 5px;
+        }
+        td.strukture.ora {
+            width: 10%;
+        }
+        .ushtrim {
+            font-size: 15px;
+            color: #0b2687;
+            padding: 3px;
+            cursor: pointer;
+        }
+        .ushtrim:hover {
+            color: #ce9d9b;
+        }
+        .pakete_pritje {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 30px;
+            border: 7px solid #f6f6f6;
+            text-shadow: 0 0 black;
+        }
+
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="../../index.html"> <img src="../../images/AZ logo.png" alt="IMG" width="100"></a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a id="user_name" href="#"></a></li>
+                <li><a id="user_last_name" href="#"></a></li>
+                <li><a id="signOut" href="#">Dil</a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+<div class="limiter">
+    <div class="container-login100">
+        <div class="wrap-login100" id="userProfile">
+            <div class="row">
+                <div class="card_title pakete_tittle">Profili i klientit</div>
+            </div>
+        </div>
+
+        <div class="wrap-login100 hidden" id="ps_program">
+            <div class="row" style="
+                            display: flex;
+                            align-items: center;
+                            flex-direction: column;
+                            overflow: scroll;">
+                <div class="card_title">Plotesoni programin stervitor me poshte:</div>
+                <form class="login100-form" id="ps_program_table" method="post">
+                    <table>
+                        <thead>
+                        <tr>
+                            <td>Dita </td>
+                            <td class="strukture">Ushtrimi</td>
+                            <td class="strukture">Repeats</td>
+                            <td class="strukture">Koha (sec)</td>
+                            <td class="strukture">Sete</td>
+                            <td class="strukture">Pesha (kg)</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr id="dita_1">
+                            <td class="strukture" id="row1" rowspan="1"><span class="add_row">1 +</span></td>
+                            <td class="strukture"><select class="get_ushtrimet" name="ush_1_1"></select> </td>
+                            <td class="strukture"><input name="rep_1_1" type="text"></td>
+                            <td class="strukture"><input name="koh_1_1" type="text"></td>
+                            <td class="strukture"><input name="set_1_1" type="text"></td>
+                            <td class="strukture"><input name="pes_1_1" type="text"></td>
+                        </tr>
+
+                        <tr id="dita_2">
+                            <td class="strukture" id="row2" rowspan="1"><span class="add_row">2 +</span></td>
+                            <td class="strukture"><select class="get_ushtrimet" name="ush_2_1"></select></td>
+                            <td class="strukture"><input name="rep_2_1" type="text"></td>
+                            <td class="strukture"><input name="koh_2_1" type="text"></td>
+                            <td class="strukture"><input name="set_2_1" type="text"></td>
+                            <td class="strukture"><input name="pes_2_1" type="text"></td>
+                        </tr>
+
+                        <tr id="dita_3">
+                            <td class="strukture" id="row3" rowspan="1"><span class="add_row">3 +</span></td>
+                            <td class="strukture"><select class="get_ushtrimet" name="ush_3_1"></select></td>
+                            <td class="strukture"><input name="rep_3_1" type="text"></td>
+                            <td class="strukture"><input name="koh_3_1" type="text"></td>
+                            <td class="strukture"><input name="set_3_1" type="text"></td>
+                            <td class="strukture"><input name="pes_3_1" type="text"></td>
+                        </tr>
+
+                        <tr id="dita_4">
+                            <td class="strukture" id="row4" rowspan="1"><span class="add_row">4 +</span></td>
+                            <td class="strukture"><select class="get_ushtrimet" name="ush_4_1"></select></td>
+                            <td class="strukture"><input name="rep_4_1" type="text"></td>
+                            <td class="strukture"><input name="koh_4_1" type="text"></td>
+                            <td class="strukture"><input name="set_4_1" type="text"></td>
+                            <td class="strukture"><input name="pes_4_1" type="text"></td>
+                        </tr>
+
+                        <tr id="dita_5">
+                            <td class="strukture" id="row5" rowspan="1"><span class="add_row">5 +</span></td>
+                            <td class="strukture"><select class="get_ushtrimet" name="ush_5_1"></select></td>
+                            <td class="strukture"><input name="rep_5_1" type="text"></td>
+                            <td class="strukture"><input name="koh_5_1" type="text"></td>
+                            <td class="strukture"><input name="set_5_1" type="text"></td>
+                            <td class="strukture"><input name="pes_5_1" type="text"></td>
+                        </tr>
+
+                        <tr id="dita_6">
+                            <td class="strukture" id="row6" rowspan="1"><span class="add_row">6 +</span></td>
+                            <td class="strukture"><select class="get_ushtrimet" name="ush_6_1"></select></td>
+                            <td class="strukture"><input name="rep_6_1" type="text"></td>
+                            <td class="strukture"><input name="koh_6_1" type="text"></td>
+                            <td class="strukture"><input name="set_6_1" type="text"></td>
+                            <td class="strukture"><input name="pes_6_1" type="text"></td>
+                        </tr>
+
+                        <tr id="dita_7">
+                            <td class="strukture" id="row7" rowspan="1"><span class="add_row">7 +</span></td>
+                            <td class="strukture"><select class="get_ushtrimet" name="ush_7_1"></select></td>
+                            <td class="strukture"><input name="rep_7_1" type="text"></td>
+                            <td class="strukture"><input name="koh_7_1" type="text"></td>
+                            <td class="strukture"><input name="set_7_1" type="text"></td>
+                            <td class="strukture"><input name="pes_7_1" type="text"></td>
+                        </tr>
+
+                        <tr id="dita_8">
+                            <td class="strukture" id="row8" rowspan="1"><span class="add_row">8 +</span></td>
+                            <td class="strukture"><select class="get_ushtrimet" name="ush_8_1"></select></td>
+                            <td class="strukture"><input name="rep_8_1" type="text"></td>
+                            <td class="strukture"><input name="koh_8_1" type="text"></td>
+                            <td class="strukture"><input name="set_8_1" type="text"></td>
+                            <td class="strukture"><input name="pes_8_1" type="text"></td>
+                        </tr>
+
+                        <tr id="dita_9">
+                            <td class="strukture" id="row9" rowspan="1"><span class="add_row">9 +</span></td>
+                            <td class="strukture"><select class="get_ushtrimet" name="ush_9_1"></select></td>
+                            <td class="strukture"><input name="rep_9_1" type="text"></td>
+                            <td class="strukture"><input name="koh_9_1" type="text"></td>
+                            <td class="strukture"><input name="set_9_1" type="text"></td>
+                            <td class="strukture"><input name="pes_9_1" type="text"></td>
+                        </tr>
+
+                        <tr id="dita_10">
+                            <td class="strukture" id="row10" rowspan="1"><span class="add_row">10 +</span></td>
+                            <td class="strukture"><select class="get_ushtrimet" name="ush_10_1"></select></td>
+                            <td class="strukture"><input name="rep_10_1" type="text"></td>
+                            <td class="strukture"><input name="koh_10_1" type="text"></td>
+                            <td class="strukture"><input name="set_10_1" type="text"></td>
+                            <td class="strukture"><input name="pes_10_1" type="text"></td>
+                        </tr>
+
+                        <tr id="dita_11">
+                            <td class="strukture" id="row11" rowspan="1"><span class="add_row">11 +</span></td>
+                            <td class="strukture"><select class="get_ushtrimet" name="ush_11_1"></select></td>
+                            <td class="strukture"><input name="rep_11_1" type="text"></td>
+                            <td class="strukture"><input name="koh_11_1" type="text"></td>
+                            <td class="strukture"><input name="set_11_1" type="text"></td>
+                            <td class="strukture"><input name="pes_11_1" type="text"></td>
+                        </tr>
+
+                        <tr id="dita_12">
+                            <td class="strukture" id="row12" rowspan="1"><span class="add_row">12 +</span></td>
+                            <td class="strukture"><select class="get_ushtrimet" name="ush_12_1"></select></td>
+                            <td class="strukture"><input name="rep_12_1" type="text"></td>
+                            <td class="strukture"><input name="koh_12_1" type="text"></td>
+                            <td class="strukture"><input name="set_12_1" type="text"></td>
+                            <td class="strukture"><input name="pes_12_1" type="text"></td>
+                        </tr>
+
+                        <tr id="dita_13">
+                            <td class="strukture" id="row13" rowspan="1"><span class="add_row">13 +</span></td>
+                            <td class="strukture"><select class="get_ushtrimet" name="ush_13_1"></select></td>
+                            <td class="strukture"><input name="rep_13_1" type="text"></td>
+                            <td class="strukture"><input name="koh_13_1" type="text"></td>
+                            <td class="strukture"><input name="set_13_1" type="text"></td>
+                            <td class="strukture"><input name="pes_13_1" type="text"></td>
+                        </tr>
+
+                        <tr id="dita_14">
+                            <td class="strukture" id="row14" rowspan="1"><span class="add_row">14 +</span></td>
+                            <td class="strukture"><select class="get_ushtrimet" name="ush_14_1"></select></td>
+                            <td class="strukture"><input name="rep_14_1" type="text"></td>
+                            <td class="strukture"><input name="koh_14_1" type="text"></td>
+                            <td class="strukture"><input name="set_14_1" type="text"></td>
+                            <td class="strukture"><input name="pes_14_1" type="text"></td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                    <div class="row" style="
+                            display: flex;
+                            align-items: center;
+                            align-content: flex-start;
+                            justify-content: space-between;">
+                        <input type="submit" class="btn btn-info" id="dergo_ps_program"  value="Dergo Programin Stervitor" >
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="wrap-login100 hidden" id="ru_program">
+            <div class="row" style="
+                            display: flex;
+                            align-items: center;
+                            flex-direction: column;
+                            overflow: scroll;">
+                <div class="card_title">Shtoni regjimin ushqimor me foto:</div>
+                <form class="login100-form" id="ru_program_foto" method="post">
+                    <div class="col-md-3 label">Bashkengjisni regjimin ushqimor me foto</div>
+                    <input type="hidden" name="has_foto" value="yes">
+                    <div class="wrap-input100 col-md-9">
+                        <input type="file" name="regjimi_foto" class="input100" style="height: auto; padding: 10px 30px 10px 68px;">
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                                                <i class="fa fa-file" aria-hidden="true"></i>
+                                            </span>
+                    </div>
+                    <div class="row" style="
+                            display: flex;
+                            align-items: center;
+                            align-content: flex-start;
+                            justify-content: space-between;">
+                        <input type="submit" class="btn btn-info" id="dergo_ru_foto"  value="Dergo Regjimin Ushqimor me Foto" >
+                    </div>
+                </form>
+                <br>
+                <div class="card_title">OSE</div>
+                <div class="card_title">Plotesoni regjimin ushqimor me poshte:</div>
+                <form class="login100-form" id="ru_program_table" method="post">
+                    <table>
+                        <thead>
+                        <tr>
+                            <td>Dita </td>
+                            <td class="strukture">Ora</td>
+                            <td class="strukture">Pershkrimi</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr id="dita_r_1">
+                            <td class="strukture ora" id="row_r_1"  rowspan="1"><span class="add_row_ru">1 +</span></td>
+                            <td class="strukture ora"><input name="ora_1_1" type="text"></td>
+                            <td class="strukture"><textarea name="per_1_1"></textarea></td>
+                        </tr>
+                        <tr id="dita_r_2">
+                            <td class="strukture ora" id="row_r_2" rowspan="1"><span class="add_row_ru">2 +</span></td>
+                            <td class="strukture ora"><input name="ora_2_1" type="text"></td>
+                            <td class="strukture"><textarea name="per_2_1"></textarea></td>
+                        </tr>
+                        <tr id="dita_r_3">
+                            <td class="strukture ora"  id="row_r_3" rowspan="1"><span class="add_row_ru">3 +</span></td>
+                            <td class="strukture ora"><input name="ora_3_1" type="text"></td>
+                            <td class="strukture"><textarea name="per_3_1"></textarea></td>
+                        </tr>
+                        <tr id="dita_r_4">
+                            <td class="strukture ora"  id="row_r_4" rowspan="1"><span class="add_row_ru">4 +</span></td>
+                            <td class="strukture ora"><input name="ora_4_1" type="text"></td>
+                            <td class="strukture"><textarea name="per_4_1"></textarea></td>
+                        </tr>
+                        <tr id="dita_r_5">
+                            <td class="strukture ora" id="row_r_5"  rowspan="1"><span class="add_row_ru">5 +</span></td>
+                            <td class="strukture ora"><input name="ora_5_1" type="text"></td>
+                            <td class="strukture"><textarea name="per_5_1"></textarea></td>
+                        </tr>
+                        <tr id="dita_r_6">
+                            <td class="strukture ora" id="row_r_6" rowspan="1"><span class="add_row_ru">6 +</span></td>
+                            <td class="strukture ora"><input name="ora_6_1" type="text"></td>
+                            <td class="strukture"><textarea name="per_6_1"></textarea></td>
+                        </tr>
+                        <tr id="dita_r_7">
+                            <td class="strukture ora" id="row_r_7" rowspan="1"><span class="add_row_ru">7 +</span></td>
+                            <td class="strukture ora"><input name="ora_7_1" type="text"></td>
+                            <td class="strukture"><textarea name="per_7_1"></textarea></td>
+                        </tr>
+                        <tr id="dita_r_8">
+                            <td class="strukture ora" id="row_r_8" rowspan="1"><span class="add_row_ru">8 +</span></td>
+                            <td class="strukture ora"><input name="ora_8_1" type="text"></td>
+                            <td class="strukture"><textarea name="per_8_1"></textarea></td>
+                        </tr>
+                        <tr id="dita_r_9">
+                            <td class="strukture ora" id="row_r_9" rowspan="1"><span class="add_row_ru">9 +</span></td>
+                            <td class="strukture ora"><input name="ora_9_1" type="text"></td>
+                            <td class="strukture"><textarea name="per_9_1"></textarea></td>
+                        </tr>
+                        <tr id="dita_r_10">
+                            <td class="strukture ora" id="row_r_10" rowspan="1"><span class="add_row_ru">10 +</span></td>
+                            <td class="strukture ora"><input name="ora_10_1" type="text"></td>
+                            <td class="strukture"><textarea name="per_10_1"></textarea></td>
+                        </tr>
+                        <tr id="dita_r_11">
+                            <td class="strukture ora" id="row_r_11"  rowspan="1"><span class="add_row_ru">11 +</span></td>
+                            <td class="strukture ora"><input name="ora_11_1" type="text"></td>
+                            <td class="strukture"><textarea name="per_11_1"></textarea></td>
+                        </tr>
+                        <tr id="dita_r_12">
+                            <td class="strukture ora" id="row_r_12" rowspan="1"><span class="add_row_ru">12 +</span></td>
+                            <td class="strukture ora"><input name="ora_12_1" type="text"></td>
+                            <td class="strukture"><textarea name="per_12_1"></textarea></td>
+                        </tr>
+                        <tr id="dita_r_13">
+                            <td class="strukture ora" id="row_r_13" rowspan="1"><span class="add_row_ru">13 +</span></td>
+                            <td class="strukture ora"><input name="ora_13_1" type="text"></td>
+                            <td class="strukture"><textarea name="per_13_1"></textarea></td>
+                        </tr>
+                        <tr id="dita_r_14">
+                            <td class="strukture ora" id="row_r_14" rowspan="1"><span class="add_row_ru">14 +</span></td>
+                            <td class="strukture ora"><input name="ora_14_1" type="text"></td>
+                            <td class="strukture"><textarea name="per_14_1"></textarea></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="row" style="
+                            display: flex;
+                            align-items: center;
+                            align-content: flex-start;
+                            justify-content: space-between;">
+                        <input type="submit" class="btn btn-info" id="dergo_ru_program"  value="Dergo Regjimin Ushqimor" >
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="wrap-login100 hidden" id="shto_program">
+            <div class="row" style="
+                            display: flex;
+                            align-items: center;
+                            align-content: flex-start;
+                            justify-content: space-between;">
+                <button class="btn btn-success hidden" id="shtoPStervitor"> Shto Program Stervitor </button>
+                <button class="btn btn-danger hidden" id="shtoRUshqimor"> Shto Regjim Ushqimor </button>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!--===============================================================================================-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+<script src="../js/controller.js"></script>
+<!--===============================================================================================-->
+<script src="../js/main.js"></script>
+<!--===============================================================================================-->
+<script src="../vendor/bootstrap/js/popper.js"></script>
+<!--===============================================================================================-->
+<script src="../vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+<script src="../vendor/tilt/tilt.jquery.min.js"></script>
+<script>
+    $('.js-tilt').tilt({
+        scale: 1.1
+    })
+    initailizeSelect2();
+    function initailizeSelect2() {
+        $('.get_ushtrimet').select2({
+            ajax: {
+                url: '../services/getUshtrimet.php',
+                dataType: 'json',
+                placeholder: 'Kerko ushtrimin'
+            }
+        });
+    };
+</script>
+<!--===============================================================================================-->
+
+</body>
+</html>

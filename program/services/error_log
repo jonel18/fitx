@@ -1,0 +1,96 @@
+[05-Oct-2021 15:55:02 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/fabergmy/public_html/aphrofit/program/services/conn.php:14) in /home4/fabergmy/public_html/aphrofit/program/services/signUp.php on line 6
+[09-Oct-2021 13:55:34 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function addUser() in /home4/fabergmy/public_html/aphrofit/program/services/logIn.php:19
+Stack trace:
+#0 /home4/fabergmy/public_html/aphrofit/program/services/logIn.php(5): checkCredentials(Object(mysqli))
+#1 {main}
+  thrown in /home4/fabergmy/public_html/aphrofit/program/services/logIn.php on line 19
+[09-Oct-2021 13:55:51 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function addUser() in /home4/fabergmy/public_html/aphrofit/program/services/logIn.php:19
+Stack trace:
+#0 /home4/fabergmy/public_html/aphrofit/program/services/logIn.php(5): checkCredentials(Object(mysqli))
+#1 {main}
+  thrown in /home4/fabergmy/public_html/aphrofit/program/services/logIn.php on line 19
+[09-Oct-2021 13:59:02 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function addUser() in /home4/fabergmy/public_html/aphrofit/program/services/logIn.php:19
+Stack trace:
+#0 /home4/fabergmy/public_html/aphrofit/program/services/logIn.php(5): checkCredentials(Object(mysqli))
+#1 {main}
+  thrown in /home4/fabergmy/public_html/aphrofit/program/services/logIn.php on line 19
+[09-Oct-2021 13:59:18 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function addUser() in /home4/fabergmy/public_html/aphrofit/program/services/logIn.php:19
+Stack trace: 
+#0 /home4/fabergmy/public_html/aphrofit/program/services/logIn.php(5): checkCredentials(Object(mysqli))
+#1 {main}
+  thrown in /home4/fabergmy/public_html/aphrofit/program/services/logIn.php on line 19
+[09-Oct-2021 13:59:53 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function addUser() in /home4/fabergmy/public_html/aphrofit/program/services/logIn.php:19
+Stack trace:
+#0 /home4/fabergmy/public_html/aphrofit/program/services/logIn.php(5): checkCredentials(Object(mysqli))
+#1 {main}
+  thrown in /home4/fabergmy/public_html/aphrofit/program/services/logIn.php on line 19
+[09-Oct-2021 14:00:33 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function addUser() in /home4/fabergmy/public_html/aphrofit/program/services/logIn.php:19
+Stack trace:
+#0 /home4/fabergmy/public_html/aphrofit/program/services/logIn.php(5): checkCredentials(Object(mysqli))
+#1 {main}
+  thrown in /home4/fabergmy/public_html/aphrofit/program/services/logIn.php on line 19
+[09-Oct-2021 14:01:51 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function addUser() in /home4/fabergmy/public_html/aphrofit/program/services/logIn.php:20
+Stack trace:
+#0 /home4/fabergmy/public_html/aphrofit/program/services/logIn.php(5): checkCredentials(Object(mysqli))
+#1 {main}
+  thrown in /home4/fabergmy/public_html/aphrofit/program/services/logIn.php on line 20
+[09-Oct-2021 14:02:04 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function addUser() in /home4/fabergmy/public_html/aphrofit/program/services/logIn.php:20
+Stack trace:
+#0 /home4/fabergmy/public_html/aphrofit/program/services/logIn.php(5): checkCredentials(Object(mysqli))
+#1 {main}
+  thrown in /home4/fabergmy/public_html/aphrofit/program/services/logIn.php on line 20
+[09-Oct-2021 14:03:01 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function addUser() in /home4/fabergmy/public_html/aphrofit/program/services/logIn.php:9
+Stack trace:
+#0 /home4/fabergmy/public_html/aphrofit/program/services/logIn.php(5): checkCredentials(Object(mysqli))
+#1 {main}
+  thrown in /home4/fabergmy/public_html/aphrofit/program/services/logIn.php on line 9
+[09-Oct-2021 14:03:32 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function addUser() in /home4/fabergmy/public_html/aphrofit/program/services/logIn.php:9
+Stack trace:
+#0 /home4/fabergmy/public_html/aphrofit/program/services/logIn.php(5): checkCredentials(Object(mysqli))
+#1 {main}
+  thrown in /home4/fabergmy/public_html/aphrofit/program/services/logIn.php on line 9
+[09-Oct-2021 14:04:41 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function addUser() in /home4/fabergmy/public_html/aphrofit/program/services/logIn.php:9
+Stack trace:
+#0 /home4/fabergmy/public_html/aphrofit/program/services/logIn.php(5): checkCredentials(Object(mysqli))
+#1 {main}
+  thrown in /home4/fabergmy/public_html/aphrofit/program/services/logIn.php on line 9
+[11-Oct-2021 16:03:36 America/Boise] PHP Warning:  Use of undefined constant intoleranca - assumed 'intoleranca' (this will throw an Error in a future version of PHP) in /home4/fabergmy/public_html/aphrofit/program/services/bliPaketen.php on line 10
+[11-Oct-2021 16:06:20 America/Boise] PHP Warning:  Use of undefined constant intoleranca - assumed 'intoleranca' (this will throw an Error in a future version of PHP) in /home4/fabergmy/public_html/aphrofit/program/services/bliPaketen.php on line 10
+[11-Oct-2021 18:06:30 America/Boise] PHP Warning:  date() expects at least 1 parameter, 0 given in /home4/fabergmy/public_html/aphrofit/program/services/bliPaketen.php on line 7
+[12-Oct-2021 18:56:22 America/Boise] PHP Warning:  move_uploaded_file(../ushtrimet/1634086582316_img-01.png): failed to open stream: No such file or directory in /home4/fabergmy/public_html/aphrofit/program/services/shtoUshtrim.php on line 20
+[12-Oct-2021 18:56:22 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpRxa7oF' to '../ushtrimet/1634086582316_img-01.png' in /home4/fabergmy/public_html/aphrofit/program/services/shtoUshtrim.php on line 20
+[13-Oct-2021 08:59:50 America/Boise] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home4/fabergmy/public_html/aphrofit/program/services/getProgramStervitor.php on line 9
+[13-Oct-2021 09:00:43 America/Boise] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home4/fabergmy/public_html/aphrofit/program/services/getProgramStervitor.php on line 9
+[13-Oct-2021 09:02:46 America/Boise] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home4/fabergmy/public_html/aphrofit/program/services/getProgramStervitor.php on line 9
+[13-Oct-2021 09:04:46 America/Boise] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home4/fabergmy/public_html/aphrofit/program/services/getProgramStervitor.php on line 9
+[13-Oct-2021 09:06:43 America/Boise] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home4/fabergmy/public_html/aphrofit/program/services/getProgramStervitor.php on line 11
+[13-Oct-2021 16:42:27 America/Boise] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home4/fabergmy/public_html/aphrofit/program/services/getProgramStervitor.php on line 10
+[14-Oct-2021 10:58:07 America/Boise] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home4/fabergmy/public_html/aphrofit/program/services/getProgramStervitor.php on line 10
+[14-Oct-2021 12:43:38 America/Boise] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home4/fabergmy/public_html/aphrofit/program/services/getNewPaketa.php on line 11
+[14-Oct-2021 12:43:38 America/Boise] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home4/fabergmy/public_html/aphrofit/program/services/getNewPaketa.php on line 16
+[14-Oct-2021 12:43:38 America/Boise] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home4/fabergmy/public_html/aphrofit/program/services/getNewPaketa.php on line 17
+[14-Oct-2021 12:43:44 America/Boise] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home4/fabergmy/public_html/aphrofit/program/services/getNewPaketa.php on line 11
+[14-Oct-2021 12:43:44 America/Boise] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home4/fabergmy/public_html/aphrofit/program/services/getNewPaketa.php on line 16
+[14-Oct-2021 12:43:44 America/Boise] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home4/fabergmy/public_html/aphrofit/program/services/getNewPaketa.php on line 17
+[14-Oct-2021 12:44:38 America/Boise] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home4/fabergmy/public_html/aphrofit/program/services/getNewPaketa.php on line 11
+[14-Oct-2021 12:44:38 America/Boise] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home4/fabergmy/public_html/aphrofit/program/services/getNewPaketa.php on line 16
+[14-Oct-2021 12:44:38 America/Boise] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home4/fabergmy/public_html/aphrofit/program/services/getNewPaketa.php on line 17
+[14-Oct-2021 17:58:14 America/Boise] PHP Warning:  A non-numeric value encountered in /home4/fabergmy/public_html/aphrofit/program/services/forgotPass.php on line 21
+[14-Oct-2021 17:58:14 America/Boise] PHP Warning:  A non-numeric value encountered in /home4/fabergmy/public_html/aphrofit/program/services/forgotPass.php on line 21
+[14-Oct-2021 17:58:14 America/Boise] PHP Warning:  A non-numeric value encountered in /home4/fabergmy/public_html/aphrofit/program/services/forgotPass.php on line 22
+[14-Oct-2021 17:59:24 America/Boise] PHP Warning:  A non-numeric value encountered in /home4/fabergmy/public_html/aphrofit/program/services/forgotPass.php on line 21
+[14-Oct-2021 17:59:24 America/Boise] PHP Warning:  A non-numeric value encountered in /home4/fabergmy/public_html/aphrofit/program/services/forgotPass.php on line 21
+[14-Oct-2021 17:59:24 America/Boise] PHP Warning:  A non-numeric value encountered in /home4/fabergmy/public_html/aphrofit/program/services/forgotPass.php on line 22
+[14-Oct-2021 17:59:38 America/Boise] PHP Warning:  A non-numeric value encountered in /home4/fabergmy/public_html/aphrofit/program/services/forgotPass.php on line 21
+[14-Oct-2021 17:59:38 America/Boise] PHP Warning:  A non-numeric value encountered in /home4/fabergmy/public_html/aphrofit/program/services/forgotPass.php on line 21
+[14-Oct-2021 17:59:38 America/Boise] PHP Warning:  A non-numeric value encountered in /home4/fabergmy/public_html/aphrofit/program/services/forgotPass.php on line 22
+[18-Dec-2021 19:06:43 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/fabergmy/public_html/aphrofit/program/services/bliPaketen.php:53) in /home4/fabergmy/public_html/aphrofit/program/services/bliPaketen.php on line 54
+[18-Dec-2021 19:06:50 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/fabergmy/public_html/aphrofit/program/services/bliPaketen.php:53) in /home4/fabergmy/public_html/aphrofit/program/services/bliPaketen.php on line 54
+[27-Dec-2021 15:52:54 America/Boise] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home4/fabergmy/public_html/aphrofit/program/services/getNewUshtrimet.php on line 17
+[27-Dec-2021 15:52:54 America/Boise] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home4/fabergmy/public_html/aphrofit/program/services/getNewUshtrimet.php on line 18
+[27-Dec-2021 15:52:59 America/Boise] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home4/fabergmy/public_html/aphrofit/program/services/getNewUshtrimet.php on line 17
+[27-Dec-2021 15:52:59 America/Boise] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home4/fabergmy/public_html/aphrofit/program/services/getNewUshtrimet.php on line 18
+[11-Jan-2022 01:50:47 America/Boise] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home4/fabergmy/public_html/aphrofit/program/services/getNewUshtrimet.php on line 17
+[11-Jan-2022 01:50:47 America/Boise] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home4/fabergmy/public_html/aphrofit/program/services/getNewUshtrimet.php on line 18
+[27-Jan-2022 01:22:04 America/Boise] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home4/fabergmy/public_html/aphrofit/program/services/getNewUshtrimet.php on line 17
+[27-Jan-2022 01:22:04 America/Boise] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home4/fabergmy/public_html/aphrofit/program/services/getNewUshtrimet.php on line 18

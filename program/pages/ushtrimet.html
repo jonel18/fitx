@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Aphrodite Exercises</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="../images/icons/favicon.ico"/>
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="../fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="../vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="../vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="../vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="../css/util.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <!--===============================================================================================-->
+    <!-- Date picker cdn -->
+    <link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!-- data table cdn -->
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+
+    <style>
+        .navbar {
+            margin-top: 3em;
+            border: none;
+        }
+
+        .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+            background-color: white;
+            color: black;
+        }
+
+        .navbar-brand,
+        .navbar-nav>li>a {
+            color: black;
+
+        }
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.25em;
+            letter-spacing: 3px;
+        }
+
+        .container-fluid {
+            background-color: #fff;
+        }
+
+        .navbar-toggle {
+            border: none;
+        }
+
+        .icon-bar {
+        // color: black;
+        }
+
+        .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+            background-color: #fff;
+        }
+
+        .navbar-default .navbar-toggle .icon-bar {
+            background-color: black;
+        }
+        .wrap-login100 {
+            width: unset;}
+        input, textarea:focus, input:focus {
+            border-width: 2px;
+            border-style: inset;
+            border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+            border-image: initial;
+        }
+        .card_title {
+            text-align: center;
+            font-size: 20px;
+            margin-bottom: 35px;
+            color: #0b2687;
+        }
+        .wrap-login100 {
+            margin: 10px;
+        }
+        .col-md-3.label {
+            color: black;
+            font-size: 15px;
+        }
+
+        @media (min-width: 1200px) {
+            .container {
+                width: unset;
+            }
+        }
+        #ushtrimet th {
+            min-width: 80px;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="../../index.html"> <img src="../../images/AZ logo.png" alt="IMG" width="100"></a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a id="user_name" href="#"></a></li>
+                <li><a id="user_last_name" href="#"></a></li>
+                <li><a id="signOut" href="#">Dil</a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+<div class="limiter">
+    <div class="container-login100">
+        <div class="wrap-login100">
+            <div class="row">
+                <div class="card_title">Lista e ushtrimeve</div>
+                <div class="container mt-5" id="get">
+                    <table id="ushtrimet" class="display">
+                        <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Emri</th>
+                            <th>Pershkrimi</th>
+                            <th>Foto</th>
+                            <th>Video</th>
+                            <th> </th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrap-login100">
+            <div class="row">
+                <div class="card_title">Shto Ushtrim</div>
+                <form class="login100-form" id="ushtrim">
+					    <div class="wrap-input100">
+                            <div class="col-md-3 label">Emri i ushtrimit</div>
+                            <input class="input100" type="text" name="emri_u" placeholder="Emri">
+                            <span class="focus-input100"></span>
+                            <span class="symbol-input100">
+						</span>
+                        </div>
+                        <div class="wrap-input100">
+                            <div class="col-md-3 label">Pershkrimi</div>
+                            <textarea class="input100" name="pershkrimi_u" placeholder="Pershkrimi"> </textarea>
+                            <span class="focus-input100"></span>
+                            <span class="symbol-input100">
+						</span>
+                        </div>
+                        <div class="wrap-input100">
+                            <div class="col-md-3 label">Shto foto</div>
+                            <input type="file" class="input100" name="foto_u" placeholder="Foto">
+                            <span class="focus-input100"></span>
+                            <span class="symbol-input100">
+						</span>
+                        </div>
+                        <div class="wrap-input100">
+                            <div class="col-md-3 label">Shto Video</div>
+                            <input type="file" class="input100" name="video_u" placeholder="Video">
+                            <span class="focus-input100"></span>
+                            <span class="symbol-input100">
+						</span>
+                        </div>
+
+                        <div class="container-login100-form-btn">
+                            <input type="submit" class="login100-form-btn" id="shtoUshtrim" value="Shto Ushtrim">
+                        </div>
+                    </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!--===============================================================================================-->
+<script src="../vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+<script src="../js/controller.js"></script>
+<!--===============================================================================================-->
+<script src="../vendor/bootstrap/js/popper.js"></script>
+<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+<script src="../vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+<script src="../vendor/tilt/tilt.jquery.min.js"></script>
+<!--===============================================================================================-->
+<script src="//cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+<script>
+    $('.js-tilt').tilt({
+        scale: 1.1
+    });
+    $(document).ready(function() {
+        $('#ushtrimet').dataTable({
+            "bProcessing": true,
+            "sAjaxSource": "../services/getNewUshtrimet.php",
+            "filter": true,
+            "aoColumns": [
+                { mData: 'id' } ,
+                { mData: 'emri' },
+                { mData: 'pershkrimi' },
+                { mData: 'foto' },
+                { mData: 'video' },
+                { mData: 'id',
+                    "fnCreatedCell": function (nTd, sData, oData, iRow, iCol) {
+                        $(nTd).html("<a class='fshi' id='"+oData.id +"'>Fshi</a>");
+                    }
+                }
+            ],
+            "fnCreatedRow": function (nRow, aData) {
+                $(nRow).attr('id', + aData.id);
+            },
+            "fnDrawCallback": function() {
+                $('#ushtrimet tbody tr').click(function () {
+                   // window.location.href = "ushtrimiView.html?id=" +  $(this).attr('id');
+                    click();
+                })
+
+            }
+        });
+    });
+
+    $( '#ushtrim' )
+        .submit(function(e){
+            var send_data = new FormData( this );
+                e.preventDefault();
+                $.ajax( {
+                    url: '../services/shtoUshtrim.php',
+                    type: 'POST',
+                    data: send_data,
+                    processData: false,
+                    contentType: false,
+                    dataType : 'json',
+                    success: function(data) {
+                        location.reload();
+                    }
+                } )
+
+        });
+
+    function click() {
+        $(".fshi").click(function () {
+            var ush_id=$(this).attr('id');
+            $.confirm({
+                title: 'Konfirmo!',
+                content: 'Jeni i sigurt qe do te fshini kete ushtrim?',
+                buttons: {
+                    Konfirmo: function () {
+                        $.post("../services/fshiUshtrim.php", {
+                                ushtrim_id: ush_id
+                            },
+                            function (data) {
+                                $.alert('Ushtrimi u fshi!');
+                                location.reload();
+                            }, "json")
+                            .fail(function () {
+                                alert("Dicka shkoi gabim. Provoni perseri me vone.");
+                            });
+                    },
+                    Anullo: function () {
+                        $.alert('Veprimi u anullua!');
+                    }
+                }
+            });
+        })
+    }
+</script>
+<!--===============================================================================================-->
+
+</body>
+</html>

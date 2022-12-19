@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Aphrodite User Profile</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="../images/icons/favicon.ico"/>
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="../fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="../vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="../vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="../vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="../css/util.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <!--===============================================================================================-->
+    <style>
+        .navbar {
+            margin-top: 3em;
+            border: none;
+        }
+
+        .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+            background-color: white;
+            color: black;
+        }
+
+        .navbar-brand,
+        .navbar-nav>li>a {
+            color: black;
+
+        }
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.25em;
+            letter-spacing: 3px;
+        }
+
+        .container-fluid {
+            background-color: #fff;
+        }
+
+        .navbar-toggle {
+            border: none;
+        }
+
+        .icon-bar {
+        // color: black;
+        }
+
+        .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+            background-color: #fff;
+        }
+
+        .navbar-default .navbar-toggle .icon-bar {
+            background-color: black;
+        }
+
+        .wrap-login100 {
+            margin: 10px;
+            padding: 40px;
+        }
+        .card_title {
+            text-align: center;
+            font-size: 20px;
+            margin-bottom: 35px;
+            color: #0b2687;
+        }
+        .row {
+            width: 100%;
+        }
+        .col-md-3.label {
+            text-align: left;
+            color: black;
+            padding-left: 30px;
+            font-size: 15px;
+        }
+
+        textarea {
+            height: 100px !important;
+            padding: 20px !important;
+        }
+
+        input[type="radio"], input[type="checkbox"] {
+            width: 40px;
+            margin: 5px 0px 5px;
+            line-height: normal;
+            display: initial;
+            height: 25px;
+        }
+        .hidden {
+            display: none;
+        }
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+            min-width: 60px;
+        }
+        .ushtrim {
+            font-size: 15px;
+            color: #0b2687;
+            padding: 3px;
+            cursor: pointer;
+        }
+        .ushtrim:hover {
+            color: #ce9d9b;
+        }
+        .pakete_pritje {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 30px;
+            border: 7px solid #f6f6f6;
+            text-shadow: 0 0 black;
+        }
+        textarea#koment {
+            width: 100%;
+            background: #f6f6f6;
+        }
+
+        form.koment_form {
+            margin-top: 50px;
+            border: 7px solid #f6f6f6;
+            padding: 10px;
+        }
+
+        .btn.shtoKoment {
+            color: #fff;
+            background-color: #5bc0de;
+            border-color: #46b8da;
+            width: 100%;
+        }
+
+        .koment_form label {
+            color: #5bc0de;
+        }
+
+        a#changePass {
+            cursor: pointer;
+        }
+
+        span.kid {
+            width: 25%;
+            display: inline-table;
+        }
+
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="../../index.html"> <img src="../../images/AZ logo.png" alt="IMG" width="100"></a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a id="user_name" href="#"></a></li>
+                <li><a id="user_last_name" href="#"></a></li>
+                <li><a id="changePass" data-toggle="modal" data-target="#ChangePassword">Ndrysho Pass.</a></li>
+                <li><a id="signOut" href="#">Dil</a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</nav>
+
+<div class="limiter">
+    <div class="container-login100">
+        <div class="wrap-login100">
+            <div class="row">
+                <div class="card_title">Mireseerdhet ne <b>Aphrofit.com</b></div>
+                <div class="card_content row" id="profile">
+                </div>
+                <div class="card_content row" style="
+                            display: flex;
+                            align-items: center;
+                            align-content: flex-start;
+                            justify-content: space-between;
+                            margin-top: 25px;">
+                    <button id="bli_PS" class="btn btn-danger hidden" data-toggle="modal" data-target="#Apliko">Bli Programin Stervitor</button>
+                    <button id="bli_RU" class="btn btn-success hidden" data-toggle="modal" data-target="#Apliko">Bli Regjimin Ushqimor</button>
+                </div>
+            </div>
+        </div>
+        <div class="wrap-login100 pakete_joaktive hidden">
+            <div class="row bli_pakete" style="
+                            display: flex;
+                            align-items: center;
+                            flex-direction: column;">
+                <div class="card_title pa_program">Ju nuk keni asnje program stervitor apo regjim ushqimor aktiv.</b></div>
+                <div class="card_content" style="
+                            display: flex;
+                            align-items: center;
+                            align-content: flex-start;
+                            justify-content: space-between;">
+                    <button id="bli_prog" class="btn btn-danger hidden" data-toggle="modal" data-target="#Apliko">Bli Paketen</button>
+                </div>
+                </div>
+        </div>
+        <!--Modals-->
+        <div class="modal fade" id="Apliko" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title" style="text-align: center">Plotesoni sa me sakte pyetjet e meposhtme</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form method="POST" action="../services/bliPaketen.php" class="login100-form validate-form apliko" enctype="multipart/form-data" id="bliPakete">
+
+                            <div class="row z_pakete">
+                                <div class="col-md-3 label">Zgjidhni paketen</div>
+                                <div class="wrap-input100 validate-input col-md-9" id="item-options">
+                                    <input class="" type="radio" name="paketa" value="PS"  price="45"><span class="kid">Programi Stervitor <br> (45 Euro)</span> </input>
+                                    <input class="" type="radio" name="paketa" value="RU"  price="35"><span class="kid">Regjimi Ushqimor <br> (35 Euro)</span> </input>
+                                    <input class="" type="radio" name="paketa" value="BOTH"  price="80" checked><span class="kid">Te dyja <br>  (80 Euro) </span></input>
+                                    <span class="focus-input100"></span>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-3 label">Pesha (kg)</div>
+                                <div class="wrap-input100 validate-input col-md-9" data-validate="Pesha eshte e nevojshme">
+                                    <input class="input100" type="text" name="pesha" placeholder="Pesha">
+                                    <span class="focus-input100"></span>
+                                    <span class="symbol-input100">
+								                <i class="fa fa-user" aria-hidden="true"></i>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-3 label">Gjatesia (cm)</div>
+                                <div class="wrap-input100 validate-input col-md-9" data-validate="Gjatesia eshte e nevojshme">
+                                    <input class="input100" type="text" name="gjatesia" placeholder="Gjatesia">
+                                    <span class="focus-input100"></span>
+                                    <span class="symbol-input100">
+                                                <i class="fa fa-user" aria-hidden="true"></i>
+                                            </span>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-3 label">Sa aktiv jeni?</div>
+                                <div class="wrap-input100 validate-input col-md-9"
+                                     data-validate="Ky informacion eshte i nevojshem">
+                                    <select name="aktiv" class="input100">
+                                        <option value="Fare">Fare</option>
+                                        <option value="Pak">Pak</option>
+                                        <option value="Shume">Shume</option>
+                                        <option value="Shume Aktiv">Shume Aktiv</option>
+                                    </select>
+                                    <span class="focus-input100"></span>
+                                    <span class="symbol-input100">
+                                                <i class="fa fa-user" aria-hidden="true"></i>
+                                            </span>
+                                </div>
+                            </div>
+
+                            <div class="row p_stervitor">
+                                <div class="col-md-3 label">Sa here do te sterviteni gjate javes?</div>
+                                <div class="wrap-input100 validate-input col-md-9"
+                                     data-validate="Ky informacion eshte i nevojshem">
+                                    <select name="stervitje" class="input100">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="Me Shume">Me shume</option>
+                                    </select>
+                                    <span class="focus-input100"></span>
+                                    <span class="symbol-input100">
+                                                <i class="fa fa-user" aria-hidden="true"></i>
+                                            </span>
+                                </div>
+                            </div>
+
+                            <div class="row p_stervitor">
+                                <div class="col-md-3 label">Ku do te sterviteni?</div>
+                                <div class="wrap-input100 validate-input col-md-9"
+                                     data-validate="Ky informacion eshte i nevojshem">
+                                    <select name="vendi_stervitjes" class="input100">
+                                        <option value="Palester">Palester</option>
+                                        <option value="Shtepi">Shtepi</option>
+                                    </select>
+                                    <span class="focus-input100"></span>
+                                    <span class="symbol-input100">
+                                                <i class="fa fa-user" aria-hidden="true"></i>
+                                            </span>
+                                </div>
+                            </div>
+
+                            <div class="row p_stervitor">
+                                <div class="col-md-3 label">Sa ore sterviteni aktualisht gjate javes?</div>
+                                <div class="wrap-input100 validate-input col-md-9"
+                                     data-validate="Ky informacion eshte i nevojshem">
+                                    <select name="ore_stervitje" class="input100">
+                                        <option value="0">0</option>
+                                        <option value="1-3">1-3</option>
+                                        <option value="4-6">4-6</option>
+                                        <option value="6-10">6-10</option>
+                                        <option value="Me Shume">Me shume</option>
+                                    </select>
+                                    <span class="focus-input100"></span>
+                                    <span class="symbol-input100">
+                                                <i class="fa fa-user" aria-hidden="true"></i>
+                                            </span>
+                                </div>
+                            </div>
+
+                            <div class="row p_stervitor">
+                                <div class="col-md-3 label">Do ta perfshini vrapin ne program?</div>
+                                <div class="wrap-input100 validate-input col-md-9"
+                                     data-validate="Ky informacion eshte i nevojshem">
+                                    <select name="vrap" class="input100">
+                                        <option value="PO">PO</option>
+                                        <option value="JO">JO</option>
+                                    </select>
+                                    <span class="focus-input100"></span>
+                                    <span class="symbol-input100">
+                                                <i class="fa fa-user" aria-hidden="true"></i>
+                                            </span>
+                                </div>
+                            </div>
+
+                            <div class="row p_stervitor">
+                                <div class="col-md-3 label">Keni ndonje problem shendetesor?</div>
+                                <div class="wrap-input100 col-md-9">
+                                    <textarea name="p_shendetesor" class="input100"></textarea>
+                                    <span class="focus-input100"></span>
+                                </div>
+                            </div>
+
+                            <div class="row p_stervitor">
+                                <div class="col-md-3 label">Pershkruani synimin qe keni per trupin tuaj</div>
+                                <div class="wrap-input100 col-md-9">
+                                    <textarea name="p_synimi" class="input100"></textarea>
+                                    <span class="focus-input100"></span>
+                                </div>
+                            </div>
+
+                            <div class="row r_ushqimor">
+                                <div class="col-md-3 label">Pershkruani historikun tuaj shendetesor</div>
+                                <div class="wrap-input100 col-md-9">
+                                    <textarea name="h_shendetesor" class="input100"></textarea>
+                                    <span class="focus-input100"></span>
+                                </div>
+                            </div>
+
+                            <div class="row r_ushqimor">
+                                <div class="col-md-3 label">Shkruani te gjitha ushqimet qe nuk konsumoni ose qe jeni alergjike</div>
+                                <div class="wrap-input100 col-md-9">
+                                    <textarea name="alergjite" class="input100"></textarea>
+                                    <span class="focus-input100"></span>
+                                </div>
+                            </div>
+
+                            <div class="row r_ushqimor">
+                                <div class="col-md-3 label">Sa kafe konsumoni gjate dites?</div>
+                                <div class="wrap-input100 validate-input col-md-9"
+                                     data-validate="Ky informacion eshte i nevojshem">
+                                    <select name="kafe" class="input100">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="Me Shume">Me shume</option>
+                                    </select>
+                                    <span class="focus-input100"></span>
+                                    <span class="symbol-input100">
+                                                <i class="fa fa-user" aria-hidden="true"></i>
+                                            </span>
+                                </div>
+                            </div>
+
+                            <div class="row r_ushqimor">
+                                <div class="col-md-3 label">Grupi i Gjakut</div>
+                                <div class="wrap-input100 validate-input col-md-9"
+                                     data-validate="Ky informacion eshte i nevojshem">
+                                    <select name="gjaku" class="input100">
+                                        <option value="0-">0-</option>
+                                        <option value="0+">0+</option>
+                                        <option value="A-">A-</option>
+                                        <option value="A+">A+</option>
+                                        <option value="B-">B-</option>
+                                        <option value="B+">B+</option>
+                                        <option value="AB-">AB-</option>
+                                        <option value="AB+">AB+</option>
+                                        <option value="Nuk e di" selected>Nuk e di</option>
+                                    </select>
+                                    <span class="focus-input100"></span>
+                                    <span class="symbol-input100">
+                                                <i class="fa fa-user" aria-hidden="true"></i>
+                                            </span>
+                                </div>
+                            </div>
+
+                            <div class="row r_ushqimor">
+                                <div class="col-md-3 label">Bashkengjisni rezultatet e Intolerances Ushqimore nese i keni</div>
+                                <div class="wrap-input100 col-md-9">
+                                    <input type="file" name="intoleranca" class="input100" style="height: auto; padding: 10px 30px 10px 68px;">
+                                    <span class="focus-input100"></span>
+                                    <span class="symbol-input100">
+                                                <i class="fa fa-file" aria-hidden="true"></i>
+                                            </span>
+                                </div>
+                            </div>
+
+                            <div class="row r_ushqimor">
+                                <div class="col-md-3 label">Keni bere here tjeter regjim ushqimor? Pershkruani eksp tuaj shkurtimisht.</div>
+                                <div class="wrap-input100 col-md-9">
+                                    <textarea name="regjim" class="input100"></textarea>
+                                    <span class="focus-input100"></span>
+                                </div>
+                            </div>
+
+
+                            <input type="hidden" name="order_id"  id="order_id" value="">
+                            <input type="hidden" name="id"  id="profile_id" value="">
+
+                            <div class="container-login100-form-btn">
+                                <div id="bli_paketen" class="login100-form-btn">
+                                    <input type="submit" value="Paguaj CASH" style=" width: 100%; height: 100%;  background: transparent;">
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Mbyll</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="modal fade" id="ViewUshtrim" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title" style="text-align: center">Shikoni ekzekutimin e ushtrimit me poshte</h4>
+                    </div>
+                    <div class="modal-body ushtrim_body">
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Mbyll</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="modal fade" id="ChangePassword" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title" style="text-align: center">Ndryshoni Fjalekalimin</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-3 label">Fjalekalimi i vjeter</div>
+                            <div class="wrap-input100 validate-input col-md-9"
+                                 data-validate="Fjalekalimi i vjeter eshte i nevojshem">
+                                <input class="input100" type="password" name="p_vjeter" placeholder="Fjalekalimi i vjeter">
+                                <span class="focus-input100"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3 label">Fjalekalimi</div>
+                            <div class="wrap-input100 validate-input col-md-9"
+                                 data-validate="Fjalekalimi eshte i nevojshem">
+                                <input class="input100" type="password" name="p_ri" placeholder="Fjalekalimi">
+                                <span class="focus-input100"></span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-3 label">Perserit fjalekalimin</div>
+                            <div class="wrap-input100 validate-input col-md-9"
+                                 data-validate="Fjalekalimi nuk perputhet">
+                                <input class="input100" type="password" name="p_r_ri"
+                                       placeholder="Perserit fjalekalimin">
+                                <span class="focus-input100"></span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <div class="container-login100-form-btn">
+                            <div class="login100-form-btn" id="ndryshoPass">Ndrysho Fjalekalimin</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!--===============================================================================================-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+<script src="../js/controller.js"></script>
+<!--===============================================================================================-->
+<script src="../js/main.js"></script>
+<!--===============================================================================================-->
+<script src="../vendor/bootstrap/js/popper.js"></script>
+<!--===============================================================================================-->
+<script src="../vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+<script src="../vendor/tilt/tilt.jquery.min.js"></script>
+<script>
+    $('.js-tilt').tilt({
+        scale: 1.1
+    })
+</script>
+<!--===============================================================================================-->
+
+
+</body>
+</html>
